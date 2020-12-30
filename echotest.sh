@@ -1,1 +1,0 @@
-sudo echo "readed readed readed readed readed readed readed readed \nreading reading reading reading reading \nreads reads reads reads reads \nreadors readers readens " > build/test/test.txt

@@ -1,3 +1,7 @@
 mkdir build
 cd build
-cmake .. && make
+cmake ..
+make
+./Lemmatizator
+cp -rf ../postfixes/ .
+ctest
