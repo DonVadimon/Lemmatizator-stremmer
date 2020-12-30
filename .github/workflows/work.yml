@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Export compilers
-    - run: export CXX="g++-9" CC="gcc-9"
+      run: export CXX="g++-9" CC="gcc-9"
     - name: Install valgrind
       run: sudo apt-get update && sudo apt-get install -y valgrind
     - name: Install gcovr
