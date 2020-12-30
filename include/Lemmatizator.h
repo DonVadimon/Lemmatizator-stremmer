@@ -1,7 +1,6 @@
 #ifndef LEMMATIZATOR_HEADER_
 #define LEMMATIZATOR_HEADER_
 
-#include <iostream>
 #include <string>
 #include <map>
 #include <vector>

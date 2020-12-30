@@ -1,5 +1,4 @@
 #include "FileReaderImpl.h"
-#include <iostream>
 #include <locale>
 #include <cctype>
 

@@ -1,6 +1,7 @@
 #include "Lemmatizator.h"
 #include <filesystem>
 #include <regex>
+#include <iostream>
 #include "FileReader.h"
 
 namespace fs = std::filesystem;
