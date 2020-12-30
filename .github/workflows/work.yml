@@ -15,8 +15,6 @@ jobs:
       run: export CXX="g++-9" CC="gcc-9" 
     - name: Install valgrind
       run: sudo apt-get install -y valgrind
-    - name: Install gcovr
-      run: sudo apt-get install python3-setuptools && sudo pip3 install git+https://github.com/gcovr/gcovr.git
     - name: Install cppcheck
       run: sudo apt-get install -y cppcheck
     - name: Run Linter
@@ -26,9 +24,4 @@ jobs:
     - name: Work
       run: cd build/ && ./Lemmatizator && cd ..
     - name: Test
-      run: cp -rf postfixes/ build/ && cd build/ && make coverage && ctest && rm -rf postfixes
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v2
-      with:
-        name: code-coverage-report
-        path: build/coverage/index.html
+      run: cp -rf postfixes/ build/ && cd build/ && ctest && rm -rf postfixes
