@@ -24,4 +24,4 @@ jobs:
     - name: Work
       run: cd build/ && ./Lemmatizator && cd ..
     - name: Test
-      run: sudo cp -rf postfixes/ build/ && cd build/ && ctest && sudo rm -rf postfixes
+      run: sudo cp -rf postfixes/ build/ && cd build/ && cd test/ && ./test_Lemmatizator_tests && cd .. && sudo rm -rf postfixes
