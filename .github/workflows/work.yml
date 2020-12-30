@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Export compilers
+    - run: export CXX="g++-9" CC="gcc-9"
     - name: Install valgrind
       run: sudo apt-get update && sudo apt-get install -y valgrind
     - name: Install gcovr
@@ -16,7 +18,7 @@ jobs:
     - name: Install cppcheck
       run: sudo apt-get install -y cppcheck
     - name: Run Linter
-      run: cd src && cppcheck *.cpp
+      run: cd src && cppcheck *.cpp && cd ..
     - name: Configure
       run: sh configure.sh
     - name: Work
