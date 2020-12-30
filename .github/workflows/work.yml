@@ -24,4 +24,4 @@ jobs:
     - name: Work
       run: cd build/ && ./Lemmatizator && cd ..
     - name: Test
-      run: echo "readed readed readed readed readed readed readed readed \nreading reading reading reading reading \nreads reads reads reads reads \nreadors readers readens " > test.txt && sudo cp -rf postfixes/ build/ && cd build/ && cd test/ && ./test_Lemmatizator_tests && cd .. && sudo rm -rf postfixes
+      run: sh echotest.sh && sudo cp -rf postfixes/ build/ && cd build/ && cd test/ && ./test_Lemmatizator_tests && cd .. && sudo rm -rf postfixes
