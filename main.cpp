@@ -1,15 +1,7 @@
 #include <iostream>
-#include "Lemmatizator.h"
 
 int main()
 {
-    auto lemms = Lemmatizator::lemmatize("/home/vadim/coding/lemm/stest.txt");
-    for (auto lemm : lemms)
-    {
-        std::wcout << "_" << lemm.first << "_" << " - " << lemm.second << '\n';
-    }
-    
-    std::cout << "\n\n\n\n";
-    
+    std::cout << "\nHello world!\n";
     return 0;
 }

@@ -1,0 +1,17 @@
+name: 'Build'
+on: [pull_request, push]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure
+      run: sh configure.sh
+    - name: Work
+      run: cd build/ && ./Lemmatizator && cd ..
+    - name: Test
+      run: cp -rf postfixes/ build/ && cd build/ && ctest
