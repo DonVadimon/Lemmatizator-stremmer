@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install gcc9 g++9
-      run: sudo apt-get update && sudo apt-get install gcc-9 g++-9
+      run: sh updatecompilers.sh
     - name: Export compilers
       run: export CXX="g++-9" CC="gcc-9" 
     - name: Install valgrind
